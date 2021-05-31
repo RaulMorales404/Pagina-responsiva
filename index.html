@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="fonts/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-nav">
+      <div class="topnav" id="myTopnav">
+          <a href="" class="short-logo">Shortly</a>
+          <div style class="button-responsive">
+              <a disabled ></a>
+              <a href="" class="text-color">Features</a>
+              <a href="" class="text-color" >Pricing
+              <a href=""class="text-color" >Resoucces<hr></a>
+              <div class="button-right">
+                  <a href="" class="text-color">Login</a>
+                  <a href="" class="button-sing" >Sing Up</a>
+                  <a style="position: absolute;" href=""></a>  
+                  <a disabled ></a>
+              </div>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </div>
+</div>
+    <main class="main container">
+      <!-- Aquí va segunda seccion información e imagen-->
+      <div class="container-img">
+        <img class="img-people" src="./images/illustration-working.svg" alt="" />
+      </div>
+      <div>
+        <h1>More than just shorter links</h1>
+        <p>
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button class="getStarted">Get Started</button>
+      </div>
+    </main>
+    <div class="container">
+      <!-- Aquí va cuarta seccion listado de links-->
+      <div class="wrapper">
+        <div class="short-link">
+          <!-- Aquí va tercera seccion formulario de shoten it-->
+          <div class="input-group" id="input">
+            <input type="text" id="linkToShort" />
+            <small id="addLinkMsg">please add a link</small>
+          </div>
+          <button
+            class="shortenIt shortenItButton"
+            onclick="shorthLink(document.getElementById('linkToShort').value)"
+          >
+            Shorten It!
+          </button>
+        </div>
+      </div>
+
+      <div class="list-links" id="listedLinks">
+      </div>
+
+      <div class="statistics">
+        <!-- Aquí va quinta seccion estadisticas avanzadas-->
+        <h1>Advanced Statistics</h1>
+
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+
+        <!-- Aquí va sexta seccion cards-->
+        <!-- card 1-->
+        <div class="wrapper-cards">
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-brand-recognition.svg" alt="" />
+            </div>
+            <h2>Brand Recognition</h2>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <!-- card 2-->
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-detailed-records.svg" alt="" />
+            </div>
+            <h2>Detailed Records</h2>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <!-- card 3-->
+
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-fully-customizable.svg" alt="" />
+            </div>
+            <h2>Fully Customizable</h2>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="boost">
+      <!-- Aquí va septima seccion-->
+      <div class="container">
+        <div class="boostContent">
+          <div id="boostLabelDiv">
+            <label for="boost" class="boostLabel">
+              Boost your links today
+            </label>
+          </div>
+          <div id="getBoostdivider">
+            <a class="getBoost" href="#">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+    <!-- Aquí va sexta seccion footer-->
+    <div class="container">
+      <div class="footerContent">
+        <div class="imgFooterContent">
+          <img src="./images/logo.svg" alt="" class="footerLogoFilter" />
+        </div>
+        <div class="featuresFooter">
+          <h1 for="Features" class="footerLabelTitle">Features</h1>
+          <label for="LinkShortening">Link Shortening</label>
+          <label for="BrandedLinks">Branded Links</label>
+          <label for="Analytics">Analytics</label>
+        </div>
+        <div class="resourcesFooter">
+          <h1 for="Resources" class="footerLabelTitle">Resources</h1>
+          <label for="Blog">Blog</label>
+          <label for="Developers">Developers</label>
+          <label for="Support">Support</label>
+        </div>
+
+        <div class="companyFooter">
+          <h1 for="Company" class="footerLabelTitle">Company</h1>
+          <label for="About">About</label>
+          <label for="Our Team">Our Team</label>
+          <label for="Careers">Careers</label>
+          <label for="Contact">Contact</label>
+        </div>
+
+        <div class="socialNetworksFooter">
+          <label><i><img alt=""> <span class="icon-facebook2"></span></i></label>
+          <label><i><img alt=""><span class="icon-twitter"></span></i></label>
+          <label><i><img alt=""><span class="icon-pinterest"></span></i></label>
+          <label><i><img alt=""><spanc class="icon-instagram"></span></i></label>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor</a>.
+        Coded by <a href="#">Team 003</a>.
+    </div>
+    <script type="text/javascript" src="./javascript.js"></script>
+  </body>
+</html>
